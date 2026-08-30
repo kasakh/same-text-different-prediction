@@ -23,5 +23,22 @@ class TestStudyPlanning(unittest.TestCase):
         self.assertGreater(len(build_target_anchored_contexts(design)), 1)
 
 
+class TestReleaseBranding(unittest.TestCase):
+    def test_public_branding_uses_non_determinism(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        metadata = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+        report_source = (ROOT / "pls_generate_report.py").read_text(encoding="utf-8")
+        public_surfaces = "\n".join((readme, metadata, report_source))
+
+        self.assertEqual(readme.splitlines()[0], "# Text Classifier Non-Determinism")
+        self.assertIn('name = "text-classifier-non-determinism"', metadata)
+        self.assertIn("text classifier non-determinism", metadata)
+        self.assertIn('"# Text Classifier Non-Determinism"', report_source)
+        old_title = "Text Classifier Serving " + "Invariance"
+        old_package = "text-classifier-serving-" + "invariance"
+        self.assertNotIn(old_title, public_surfaces)
+        self.assertNotIn(old_package, public_surfaces)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

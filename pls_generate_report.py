@@ -71,7 +71,7 @@ def main() -> int:
     table = markdown_table(rows)
     (output_dir / "family_summary.md").write_text("# Serving-context summary\n\n" + table, encoding="utf-8")
 
-    report = ["# Text Classifier Serving Invariance", "", "## Aggregate metrics", "", table.rstrip(), ""]
+    report = ["# Text Classifier Non-Determinism", "", "## Aggregate metrics", "", table.rstrip(), ""]
     if args.position_results:
         position = json.loads(Path(args.position_results).read_text(encoding="utf-8"))
         report.extend(["## Position diagnostic", "", f"Validated cells: {position.get('gates', {}).get('cells_valid', 'unknown')}", ""])

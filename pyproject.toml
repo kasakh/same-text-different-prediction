@@ -3,9 +3,9 @@ requires = ["setuptools==81.0.0", "wheel==0.46.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "text-classifier-serving-invariance"
+name = "text-classifier-non-determinism"
 version = "1.0.0"
-description = "Reproducibility tools for text classifier serving-context invariance"
+description = "Reproducibility tools for text classifier non-determinism under serving-context changes"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [

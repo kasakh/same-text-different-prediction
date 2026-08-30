@@ -13,8 +13,8 @@ Provenance categories:
 |---|---|---|
 | `.gitignore` | New release metadata | Excludes environments, caches, checkpoints, binaries, and generated outputs. |
 | `MANIFEST.md` | New release metadata | Complete release inventory and provenance categories. |
-| `README.md` | New release metadata | Setup, commands, outputs, scope, and limitations. |
-| `pyproject.toml` | New release metadata | Python package metadata and command entry points. |
+| `README.md` | New release metadata | Non-determinism framing, setup, commands, outputs, scope, and limitations. |
+| `pyproject.toml` | New release metadata | Non-determinism package metadata and command entry points. |
 | `requirements.txt` | New release metadata | Exact direct package versions from the recorded execution stack. |
 | `configs/serving_context.yaml` | Sanitized configuration | One-axis serving-context and target-anchored design for 180 checkpoints. |
 | `configs/smoke.yaml` | Sanitized configuration | One-job planning and training smoke configuration. |
