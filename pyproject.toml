@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools==81.0.0", "wheel==0.46.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text-classifier-serving-invariance"
+version = "1.0.0"
+description = "Reproducibility tools for text classifier serving-context invariance"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "torch==2.11.0",
+  "transformers==5.6.2",
+  "datasets==4.8.4",
+  "pytorch-lightning==2.6.1",
+  "scikit-learn==1.8.0",
+  "numpy==2.4.4",
+  "pandas==3.0.2",
+  "scipy==1.17.1",
+  "PyYAML==6.0.3",
+  "pyarrow==24.0.0",
+  "tensorboard==2.20.0",
+]
+
+[project.scripts]
+classifier-plan-training = "pls_plan_train:main"
+classifier-plan-contexts = "pls_plan_v2:main"
+classifier-infer = "pls_run_inference_context:main"
+classifier-metrics = "pls_metrics_v2:main"
+classifier-score-drift = "pls_revision_reanalysis:main"
+classifier-position-plan = "pls_plan_posid_diag:main"
+classifier-position-analyze = "pls_analyze_posid_diag:main"
+classifier-parity = "pls_parity:main"
+classifier-report = "pls_generate_report:main"
+
+[tool.setuptools]
+packages = ["pls"]
+py-modules = [
+  "pls_train_classifier",
+  "pls_plan_jobs",
+  "pls_plan_train",
+  "pls_plan_v2",
+  "pls_run_inference_context",
+  "pls_metrics_v2",
+  "pls_revision_reanalysis",
+  "pls_plan_train_posid_consistency",
+  "pls_plan_posid_diag",
+  "pls_analyze_posid_diag",
+  "pls_parity",
+  "pls_generate_report",
+]

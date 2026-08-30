@@ -1,0 +1,20 @@
+experiment:
+  artifact_root: ./outputs/smoke
+training:
+  enabled: true
+  datasets: [sst2]
+  model_types: [BERT]
+  model_sizes: [small]
+  seeds: [40]
+  num_samples: [500]
+  epochs: 2
+  train_batch_sizes: [16]
+  treat_train_batch_size_as_axis: false
+  learning_rate: 2.0e-5
+  num_warmup_steps: 0
+  use_test_as_val: false
+  early_stopping_patience: 1
+  seed_profile: strict
+  budget_max_jobs: 1
+inference:
+  enabled: false

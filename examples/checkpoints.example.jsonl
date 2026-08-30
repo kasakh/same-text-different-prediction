@@ -1,0 +1,2 @@
+{"checkpoint_path":"checkpoints/encoder_sst2_small_seed40/model.ckpt","dataset":"sst2","model_size":"small","model_type":"BERT","seed":40,"train_dir":"checkpoints/encoder_sst2_small_seed40","train_run_id":"encoder_sst2_small_seed40"}
+{"checkpoint_path":"checkpoints/decoder_sst2_small_seed40/model.ckpt","dataset":"sst2","model_size":"small","model_type":"pure-gen-GPT2","seed":40,"train_dir":"checkpoints/decoder_sst2_small_seed40","train_run_id":"decoder_sst2_small_seed40"}

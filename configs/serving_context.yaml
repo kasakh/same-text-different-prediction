@@ -1,0 +1,53 @@
+experimental_design:
+  reference_cell:
+    backend: pytorch
+    seed_profile: production_like
+    dtype: fp32
+    quantization: none
+    device: cuda
+    batch_size: 32
+    order_policy: {name: identity, type: identity}
+    split: test
+    reference_repeat_id: 0
+  serving_spokes:
+    batch_size: [1, 2, 4, 8, 16, 64]
+    dtype: [bf16, fp16]
+    quantization: [dynamic_int8_cpu]
+    order_policy: [reverse, seeded_shuffle_0, seeded_shuffle_1]
+  deferred_spokes:
+    hardware: [cpu, secondary_gpu]
+    backend: [vllm, sglang]
+  target_anchored:
+    enabled: true
+    batch_size: 8
+    max_targets: 2000
+    target_sampling: stratified
+    reference_predictions_path: null
+    seed: 0
+    static_max_length: 512
+    reference:
+      composition_policy: random
+      batch_position: first
+      padding_policy: dynamic_longest
+    position_spokes: [middle, last]
+    composition_spokes: [short, long, mixed_length]
+    padding_spokes: [static_max_length]
+    composition_padding: static_max_length
+  interaction_block:
+    enabled: true
+    max_contexts_per_checkpoint: 12
+    interactions:
+      - axes: [batch_size, dtype]
+        levels:
+          batch_size: [1, 64]
+          dtype: [bf16]
+  repeats: 1
+  budget:
+    serving_max_logical_contexts: 10000
+    serving_max_physical_jobs: 50000
+    require_explicit_override: true
+  checkpoint_grid:
+    datasets: [sst2, sst5, emotion, ag_news, imdb]
+    families: [encoder_classifier, mlm_classifier, decoder_label_token, decoder_autoregressive]
+    sizes: [small, med, large]
+    seeds: [40, 41, 42]
