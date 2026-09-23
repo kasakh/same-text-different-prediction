@@ -2,6 +2,9 @@
 
 This repository is an anonymous reproducibility package for a 180-checkpoint study of text-classifier non-determinism under changes in serving context. The repository uses non-determinism as its public-facing name while distinguishing two technical questions. Same-context run-to-run nondeterminism asks whether an identical execution changes across repetitions. Serving-context non-invariance asks whether outputs change when the checkpoint, text, and tokenizer stay fixed but hidden serving conditions change. The study also separates structural changes to represented token positions from numerical execution changes that preserve the represented input.
 
+Exact model dimensions, library versions, hardware, determinism settings,
+and quantization APIs are consolidated in `REPRODUCIBILITY.md`.
+
 ## Included study
 
 The main grid contains 180 independently trained checkpoints:
