@@ -12,7 +12,7 @@ authors:
     given-names: Sumit
     affiliation: Amazon
 preferred-citation:
-  type: conference-paper
+  type: article
   title: "Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers"
   authors:
     - family-names: Kasa
@@ -21,5 +21,9 @@ preferred-citation:
       given-names: Siva Rajesh
     - family-names: Negi
       given-names: Sumit
-  collection-title: "NeurIPS 2026 Workshops: TAE (Trust-AI-Eval), LIGHT, and ODI"
+  journal: "arXiv preprint arXiv:2610.09111"
   year: 2026
+  url: "https://arxiv.org/abs/2610.09111"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.09111"

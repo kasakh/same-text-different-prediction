@@ -2,7 +2,7 @@
 
 Santhosh Kumar Kasa, Siva Rajesh Kasa, and Sumit Negi (Amazon)
 
-This repository contains the code for the paper *Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers*.
+This repository contains the code for the paper [*Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers*](https://arxiv.org/abs/2610.09111).
 
 ## Venues
 
@@ -17,11 +17,15 @@ The paper was accepted at three NeurIPS 2026 workshops. All three are non-archiv
 If you use this code, please cite:
 
 ```bibtex
-@inproceedings{kasa2026sametext,
-  title     = {Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers},
-  author    = {Kasa, Santhosh Kumar and Kasa, Siva Rajesh and Negi, Sumit},
-  booktitle = {NeurIPS 2026 Workshops: TAE (Trust-AI-Eval), LIGHT, and ODI},
-  year      = {2026}
+@article{kasa2026sametext,
+  title         = {Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers},
+  author        = {Kasa, Santhosh Kumar and Kasa, Siva Rajesh and Negi, Sumit},
+  journal       = {arXiv preprint arXiv:2610.09111},
+  year          = {2026},
+  eprint        = {2610.09111},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2610.09111}
 }
 ```
 
