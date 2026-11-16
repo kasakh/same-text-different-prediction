@@ -1,6 +1,33 @@
-# Text Classifier Non-Determinism
+# Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers
 
-This repository is an anonymous reproducibility package for a 180-checkpoint study of text-classifier non-determinism under changes in serving context. The repository uses non-determinism as its public-facing name while distinguishing two technical questions. Same-context run-to-run nondeterminism asks whether an identical execution changes across repetitions. Serving-context non-invariance asks whether outputs change when the checkpoint, text, and tokenizer stay fixed but hidden serving conditions change. The study also separates structural changes to represented token positions from numerical execution changes that preserve the represented input.
+Santhosh Kumar Kasa, Siva Rajesh Kasa, and Sumit Negi (Amazon)
+
+This repository contains the code for the paper *Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers*.
+
+## Venues
+
+The paper was accepted at three NeurIPS 2026 workshops. All three are non-archival.
+
+- TAE (Trust-AI-Eval): Can We Trust AI Evaluation?
+- LIGHT: Workshop on Lightweight and Trustworthy Foundation Models
+- ODI: On-Device Intelligence: Foundation Models under Real-World Constraints
+
+## Citation
+
+If you use this code, please cite:
+
+```bibtex
+@inproceedings{kasa2026sametext,
+  title     = {Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers},
+  author    = {Kasa, Santhosh Kumar and Kasa, Siva Rajesh and Negi, Sumit},
+  booktitle = {NeurIPS 2026 Workshops: TAE (Trust-AI-Eval), LIGHT, and ODI},
+  year      = {2026}
+}
+```
+
+## Overview
+
+This repository is a reproducibility package for a 180-checkpoint study of text-classifier non-determinism under changes in serving context. The repository uses non-determinism as its public-facing name while distinguishing two technical questions. Same-context run-to-run nondeterminism asks whether an identical execution changes across repetitions. Serving-context non-invariance asks whether outputs change when the checkpoint, text, and tokenizer stay fixed but hidden serving conditions change. The study also separates structural changes to represented token positions from numerical execution changes that preserve the represented input.
 
 Exact model dimensions, library versions, hardware, determinism settings,
 and quantization APIs are consolidated in `REPRODUCIBILITY.md`.

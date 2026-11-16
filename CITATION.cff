@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers"
+authors:
+  - family-names: Kasa
+    given-names: Santhosh Kumar
+    affiliation: Amazon
+  - family-names: Kasa
+    given-names: Siva Rajesh
+    affiliation: Amazon
+  - family-names: Negi
+    given-names: Sumit
+    affiliation: Amazon
+preferred-citation:
+  type: conference-paper
+  title: "Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers"
+  authors:
+    - family-names: Kasa
+      given-names: Santhosh Kumar
+    - family-names: Kasa
+      given-names: Siva Rajesh
+    - family-names: Negi
+      given-names: Sumit
+  collection-title: "NeurIPS 2026 Workshops: TAE (Trust-AI-Eval), LIGHT, and ODI"
+  year: 2026
